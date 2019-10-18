@@ -4,7 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 
 @Getter
-@Builder(builderMethodName = "aUser")
+@Builder(builderClassName = "UserStaticBuilder" ,builderMethodName = "aUser")
 public class UserBuilder extends User {
     @Builder.Default
     public String firstname = "default first name";
@@ -12,4 +12,8 @@ public class UserBuilder extends User {
     public String lastname = "default last name";
     @Builder.Default
     public String email = "default email";
+
+    public static UserStaticBuilder aUser() {
+        return new UserStaticBuilder();
+    }
 }

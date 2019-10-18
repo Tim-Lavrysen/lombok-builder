@@ -3,6 +3,8 @@ package be.tim.multiple_pojo;
 
 import org.junit.Test;
 
+import static be.tim.multiple_pojo.FriendBuilder.aFriend;
+import static be.tim.multiple_pojo.UserWithAFriendBuilder.aUserWithAFriend;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class UserWithFriendTest {
@@ -12,7 +14,7 @@ public class UserWithFriendTest {
 
     @Test
     public void createUserWithAFriendLombokBuilder() {
-        UserWithAFriend user = UserWithAFriendBuilder.aUserWithAFriend()
+        UserWithAFriend user = aUserWithAFriend()
                 .email(OVERRIDE_DEFAULT_EMAIL_BUILDER_VALUE)
                 .build();
 
@@ -23,11 +25,11 @@ public class UserWithFriendTest {
 
     @Test
     public void createUserWithAFriendLombokBuilderAndOverrideAFriendValue() {
-        FriendBuilder friend = FriendBuilder.aFriend()
+        FriendBuilder friend = aFriend()
                 .whatWasHisNameAgain(OVERRIDE_DEFAULT_FRIENDNAME_BUILDER_VALUE)
                 .build();
 
-        UserWithAFriend user = UserWithAFriendBuilder.aUserWithAFriend()
+        UserWithAFriend user = aUserWithAFriend()
                 .friend(friend)
                 .build();
 
