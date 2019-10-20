@@ -8,9 +8,6 @@ Solutions:
  - Static import @builder (by default this not possible due to a Javac bug)
 
 Key classes:
-Builder classes for a single pojo:
- - be.tim.single_pojo.UserBuilder
-
-Builder classes for multiple pojo's:
- - be.tim.multiple_pojo.UserWithAFriendBuilder which includes the FriendBuilder
+ - Builder classes for a single pojo: be.tim.single_pojo.UserBuilder
+ - Builder classes for multiple pojo's: be.tim.multiple_pojo.UserWithAFriendBuilder which includes the FriendBuilder
  
