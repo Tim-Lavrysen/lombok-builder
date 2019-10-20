@@ -6,3 +6,10 @@ Solutions:
  - No @builder in pojo's/entities
  - Default values defined only in builder class
  - Static import @builder (by default this not possible due to a Javac bug)
+
+Builder classes for a single pojo:
+ be.tim.single_pojo.UserBuilder
+
+Builder classes for multiple pojo's:
+ be.tim.multiple_pojo.UserWithAFriendBuilder which includes the FriendBuilder
+ 
